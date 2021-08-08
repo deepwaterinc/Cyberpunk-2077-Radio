@@ -1,0 +1,87 @@
+html {
+   background-image: url(/Background/Nightcity.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-attachment: fixed;
+   background-size: cover;
+ }
+
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80vh;
+}
+
+.circular-menu {
+   position: relative;
+   width: 300px;
+   height: 300px;
+}
+
+.circular-menu__item {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   text-decoration: none;
+   border: none;
+   outline: none;
+   background-color: #fcf604;
+   color: #000;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.circular-menu__button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+   background-color: #13334c;
+   outline: none;
+}
+
+.circular-menu__lines,
+.circular-menu__lines::before,
+.circular-menu__lines::after {
+   position: absolute;
+   width: 40px;
+   height: 6px;
+   background-color: #f6f6e9;
+   transition: 0.3s;
+}
+
+.circular-menu__lines {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: transparent;
+}
+
+.circular-menu__lines::before {
+   content: "";
+}
+
+.circular-menu__lines::after {
+   content: "";
+   transform: rotate(90deg);
+}
+
+.circular-menu__button_active .circular-menu__lines::before {
+   transform: rotate(135deg);
+}
+.circular-menu__button_active .circular-menu__lines::after {
+   transform: rotate(225deg);
+}
