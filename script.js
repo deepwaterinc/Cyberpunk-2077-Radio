@@ -18,7 +18,7 @@ button.addEventListener ('click', function() {
          const angle = i * arc;
          const x = radius * Math.cos(angle);
          const y = radius * Math.sin(angle);
-
+         items[i].classList.add('circular-menu__item--active');
          items[i].style.left = 50 + x + '%';
          items[i].style.top = 50 + y + '%';
       }
@@ -26,15 +26,12 @@ button.addEventListener ('click', function() {
       button.classList.remove('circular-menu__button--active');
       for (let i = 0; i < length; i++) {
          items[i].removeAttribute('style');
+         items[i].classList.remove('circular-menu__item--active');
       }
    }      
 });
 
 
 
-//Selected item background
-function selectBG(item) {
-   item.classList.add('circular-menu__item_active')
-}
 
 

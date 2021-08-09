@@ -29,6 +29,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   text-align: center;
    width: 80px;
    height: 80px;
    border-radius: 50%;
@@ -37,16 +38,28 @@ body {
    background-color: #000;
    color: #fcf604;
    cursor: pointer;
-   transition: 0.3s;
+   opacity: 0;
+   transition: 0.4s ease;
 }
 .circular-menu__item:hover {
    box-shadow: 0px 0px 10px 1px #fcf604;
 }
 .circular-menu__item--active {
+   opacity: 1;
+}
+.item__checkbox {
+   width: 1px;
+   height: 1px;
+   position: absolute;
+   opacity: 0;
+   appearance: 0;
+}
+.item__checkbox:checked + .circular-menu__item {
    background-color: #fcf604;
    color: #000;
    box-shadow: 0px 0px 10px 1px #fcf604;
 }
+
 
 .circular-menu__button {
    position: absolute;
